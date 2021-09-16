@@ -17,6 +17,7 @@ def main():
     parser = Parser(lexer,emitter)
 
     parser.program() # Start the parser.
+    emitter.writeFile() 
     print("Parsing completed.")
 
 main()

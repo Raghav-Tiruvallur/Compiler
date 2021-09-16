@@ -3,7 +3,7 @@ COMPILER="code.py"
 CC="gcc"
 
 function comp {
-	BN=$(basename -s .teeny $1)
+	BN=$(basename -s .roar $1)
 	TTOUTPUT=$(${PYTHON} ${COMPILER} $1 2>&1)
 	if [ $? -ne 0 ]; then
 		echo "${TTOUTPUT}"
@@ -19,7 +19,7 @@ function comp {
 }
 
 if [ $# -eq 0 ]; then
-	for i in $(ls examples/*.teeny); do
+	for i in $(ls examples/*.roar); do
 		comp $i
 	done
 else
